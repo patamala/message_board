@@ -13,10 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.Message;
 import utils.DBUtil;
-import javax.servlet.RequestDispatcher;
-/**
- * Servlet implementation class IndexServlet
- */
+
 @WebServlet("/index")
 public class IndexServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
