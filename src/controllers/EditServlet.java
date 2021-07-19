@@ -37,7 +37,7 @@ public class EditServlet extends HttpServlet {
         Message m = em.find(Message.class, Integer.parseInt(request.getParameter("id")));
 
         em.close();
-
+//追加
         // メッセージ情報とセッションIDをリクエストスコープに登録
         request.setAttribute("message", m);
         request.setAttribute("_token", request.getSession().getId());
@@ -50,7 +50,7 @@ public class EditServlet extends HttpServlet {
 
         // メッセージIDをセッションスコープに登録
         request.getSession().setAttribute("message_id", m.getId());
-
+//追加
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/messages/edit.jsp");
         rd.forward(request, response);
     }
